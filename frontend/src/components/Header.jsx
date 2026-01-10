@@ -1,4 +1,11 @@
-// ... (rest of the imports)
+/**
+ * Header.jsx
+ *
+ * Premium application header component with navigation, dark mode toggle, and notifications.
+ */
+
+import React, { useState, useEffect, useRef } from 'react';
+import { Link, NavLink, useLocation } from 'react-router-dom'; // <--- ADDED useLocation HERE
 import {
   Moon,
   Sun,
@@ -35,7 +42,7 @@ const Header = () => {
     fetchScrapingStatus,
   } = useAppContext();
 
-  const location = useLocation();
+  const location = useLocation(); // This line was causing the error
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
