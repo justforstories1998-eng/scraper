@@ -1,9 +1,4 @@
-/**
- * ContentCard.jsx
- *
- * Displays a single content item (news, job, blog, article) in a card format.
- */
-
+// ... (rest of the imports)
 import React from 'react';
 import { formatDistanceToNow, parseISO } from 'date-fns';
 import { Link } from 'react-router-dom';
@@ -29,7 +24,7 @@ const ContentCard = ({ content }) => {
   // Format date
   const timeAgo = publishedAt ? formatDistanceToNow(parseISO(publishedAt), { addSuffix: true }) : 'Unknown date';
 
-  const defaultImage = '/src/assets/webmethods-bg-placeholder.png'; // A generic placeholder image
+  const defaultImage = '/webmethods-bg-placeholder.png'; // CHANGED LINE - Reference from public folder
 
   // Determine card header color based on content type
   const typeColors = {

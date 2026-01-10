@@ -1,11 +1,4 @@
-/**
- * Header.jsx
- *
- * Premium application header component with navigation, dark mode toggle, and notifications.
- */
-
-import React, { useState, useEffect, useRef } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+// ... (rest of the imports)
 import {
   Moon,
   Sun,
@@ -210,7 +203,7 @@ const Header = () => {
                 ) : (
                   <button
                     onClick={fetchScrapingStatus}
-                    className={`flex items-center gap-2 px-3 py-1.5 rounded-full transition-all duration-300 ${
+                    className={`flex items-center gap-2 px-3 py-1.5 rounded-full transition-all duration-300 group ${
                       isScrapingRunning
                         ? 'bg-gradient-to-r from-green-500 to-emerald-500 text-white shadow-lg shadow-green-500/30'
                         : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
