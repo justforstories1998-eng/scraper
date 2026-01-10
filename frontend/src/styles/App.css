@@ -1,0 +1,40 @@
+/* Custom styles that aren't covered by Tailwind or are highly specific */
+
+/* Example: If you need to override a specific element or add custom animations */
+
+/* Custom scrollbar for better UX in dark mode */
+/* This is already in index.css, but including here for completeness if needed */
+/* .custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 163, 175, 0.5); 
+  border-radius: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+} */
+
+/* For Firefox */
+/* .custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(156, 163, 175, 0.5) transparent;
+} */
+
+
+/* Animations */
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 3s linear infinite;
+}
